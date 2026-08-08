@@ -925,13 +925,12 @@ input, select, textarea { font: inherit; }
 .contact-aside__info .icon { margin-top: 2px; stroke: var(--text-tertiary); }
 
 /* ============ FOOTER ============ */
-.footer { padding: var(--sp-8) 0 var(--sp-6); background: linear-gradient(180deg, #000 0%, #070707 100%); }
+.footer { padding: var(--sp-8) 0 var(--sp-6); background: radial-gradient(ellipse 60% 45% at 15% 0%, rgba(59, 130, 246, 0.08), transparent 70%), radial-gradient(ellipse 55% 45% at 90% 20%, rgba(59, 130, 246, 0.05), transparent 70%), linear-gradient(180deg, #000 0%, #070707 100%); }
 .footer__inner {
   display: grid;
   grid-template-columns: 1.6fr repeat(3, 1fr);
   gap: var(--sp-6);
 }
-.footer__tagline { color: var(--text-tertiary); font-size: 13.5px; margin-top: var(--sp-3); }
 .footer__about { color: var(--text-secondary); font-size: 14px; line-height: 1.6; max-width: 34ch; margin-top: var(--sp-3); }
 .footer__social { display: flex; align-items: center; gap: var(--sp-3); margin-top: var(--sp-4); }
 .footer__col h4 {
@@ -970,6 +969,8 @@ input, select, textarea { font: inherit; }
   background: var(--surface-2);
   border-radius: 50%;
   color: var(--text-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: 0 0 18px -6px var(--brand-glow);
   transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .footer__social-link .icon {
