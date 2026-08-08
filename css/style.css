@@ -1,8 +1,3 @@
-/* ============================================================
-   CHIEDZA LABS — CORE STYLESHEET
-   Monochrome system: black base, white ink, layered black
-   gradients for depth. No color accent — contrast IS the accent.
-   ============================================================ */
 
 :root {
   /* Color: true black base with graduated near-black surfaces */
@@ -23,6 +18,13 @@
   --accent-hover: #e6e6e6;
   --accent-dim: rgba(255, 255, 255, 0.08);
   --accent-border: rgba(255, 255, 255, 0.24);
+
+  /* Brand accent — electric blue, used sparingly across touchpoints */
+  --brand: #3b82f6;
+  --brand-hover: #2563eb;
+  --brand-dim: rgba(59, 130, 246, 0.14);
+  --brand-glow: rgba(59, 130, 246, 0.45);
+  --brand-border: rgba(59, 130, 246, 0.4);
 
   /* Reserved semantic colors — used only where meaning requires it
      (form errors, live-status), never for branding or decoration */
@@ -57,7 +59,7 @@
   --dur-med: 320ms;
   --dur-slow: 600ms;
 
-  --container-w: 1180px;
+  --container-w: 1250px;
   --nav-h: 76px;
 }
 
@@ -105,7 +107,7 @@ input, select, textarea { font: inherit; }
 .skip-link:focus { top: var(--sp-4); }
 
 :focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--brand);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -113,7 +115,7 @@ input, select, textarea { font: inherit; }
 .container {
   max-width: var(--container-w);
   margin: 0 auto;
-  padding: 0 var(--sp-6);
+  padding: 0 var(--sp-3);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -162,12 +164,12 @@ input, select, textarea { font: inherit; }
 .btn--lg { padding: 16px 30px; font-size: 16px; }
 
 .btn--primary {
-  background: #ffffff;
-  color: #000000;
-  box-shadow: 0 8px 28px -14px rgba(255, 255, 255, 0.35);
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 8px 28px -14px var(--brand-glow);
 }
-.btn--primary:hover { background: var(--accent-hover); box-shadow: 0 10px 32px -12px rgba(255, 255, 255, 0.45); }
-.btn--primary .icon { stroke: #000; }
+.btn--primary:hover { background: var(--brand-hover); box-shadow: 0 10px 32px -12px var(--brand-glow); }
+.btn--primary .icon { stroke: #fff; }
 
 .btn--secondary {
   background: var(--surface-2);
@@ -195,7 +197,7 @@ input, select, textarea { font: inherit; }
   color: var(--text-secondary);
   background: var(--surface-2);
 }
-.badge--accent { color: #000; border-color: #fff; background: #fff; font-weight: 600; }
+.badge--accent { color: #fff; border-color: var(--brand); background: var(--brand); font-weight: 600; }
 
 /* ============ NAVBAR ============ */
 .navbar {
@@ -256,7 +258,7 @@ input, select, textarea { font: inherit; }
 .navbar__link::after {
   content: "";
   position: absolute; left: 0; right: 100%; bottom: 0;
-  height: 1px; background: #fff;
+  height: 1px; background: var(--brand);
   transition: right var(--dur-med) var(--ease);
 }
 .navbar__link:hover { color: var(--text-primary); }
@@ -318,7 +320,7 @@ input, select, textarea { font: inherit; }
 }
 .hero__headline span { display: block; }
 .hero__headline-accent {
-  background: linear-gradient(100deg, #fff 20%, #767676 45%, #fff 60%, #8a8a8a 80%);
+  background: linear-gradient(100deg, #fff 15%, var(--brand) 45%, #9bc1ff 60%, var(--brand) 75%, #fff 90%);
   background-size: 250% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -449,7 +451,7 @@ input, select, textarea { font: inherit; }
   border-color: var(--border-strong);
   background: linear-gradient(160deg, #141414 0%, #060606 100%);
 }
-.service-card--accent { border-color: rgba(255,255,255,0.3); }
+.service-card--accent { border-color: var(--brand-border); }
 .service-card__index {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -504,8 +506,8 @@ input, select, textarea { font: inherit; }
 }
 .chat-widget__status {
   width: 8px; height: 8px; border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.15);
+  background: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-dim);
   animation: pulse-dot 2s ease-in-out infinite;
 }
 @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
@@ -592,11 +594,11 @@ input, select, textarea { font: inherit; }
   width: 38px; height: 38px; flex-shrink: 0;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: #fff;
-  color: #000;
+  background: var(--brand);
+  color: #fff;
   transition: background var(--dur-fast) var(--ease);
 }
-.chat-widget__send:hover { background: var(--accent-hover); }
+.chat-widget__send:hover { background: var(--brand-hover); }
 
 /* ============ PORTFOLIO ============ */
 .portfolio { padding: var(--sp-9) 0; background: #000; }
