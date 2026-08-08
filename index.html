@@ -78,30 +78,89 @@
     </div>
   </section>
 
-  <!-- ============ FEATURED PROJECT ============ -->
-  <section class="featured" aria-labelledby="featured-heading">
+  <!-- ============ FEATURED PROJECTS ============ -->
+  <section class="featured" aria-label="Featured projects">
     <div class="container">
-      <div class="featured__card reveal-on-scroll">
-        <div class="featured__visual" aria-hidden="true">
-          <div class="featured__browser featured__browser--image" style="background-image: url('assets/images/urban.jpeg')"></div>
-        </div>
+      <div class="featured-carousel reveal-on-scroll" id="featuredCarousel" data-autoplay="true">
 
-        <div class="featured__content">
-          <p class="eyebrow">FEATURED PROJECT</p>
-          <h2 id="featured-heading" class="featured__title">Urban Wheels</h2>
-          <p class="featured__subtitle">Modern Automotive Sales Platform</p>
-          <p class="featured__desc">A modern automotive sales website and platform — sleek inventory browsing, vehicle listings and an integrated database.</p>
+        <div class="featured-carousel__viewport">
+          <button class="featured-carousel__arrow" data-dir="prev" aria-label="Previous project">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
 
-          <div class="badge-row">
-            <span class="badge">Business</span>
-            <span class="badge">Web</span>
-            <span class="badge">Database</span>
+          <div class="featured-carousel__track">
+
+            <article class="featured__card">
+              <div class="featured__visual" aria-hidden="true">
+                <div class="featured__browser featured__browser--image" style="background-image: url('assets/images/urban.jpeg')"></div>
+              </div>
+              <div class="featured__content">
+                <p class="eyebrow">FEATURED PROJECT</p>
+                <h2 class="featured__title">Urban Wheels</h2>
+                <p class="featured__subtitle">Modern Automotive Sales Platform</p>
+                <p class="featured__desc">A modern automotive sales website and platform — sleek inventory browsing, vehicle listings and an integrated database.</p>
+                <div class="badge-row">
+                  <span class="badge">Business</span>
+                  <span class="badge">Web</span>
+                  <span class="badge">Database</span>
+                </div>
+                <div class="featured__actions">
+                  <a href="https://www.urbanwheels.co.zw" class="btn btn--ghost" target="_blank" rel="noopener">Live Demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured__card">
+              <div class="featured__visual" aria-hidden="true">
+                <div class="featured__browser featured__browser--image" style="background-image: url('assets/images/gradelytics.JPG')"></div>
+              </div>
+              <div class="featured__content">
+                <p class="eyebrow">FEATURED PROJECT</p>
+                <h2 class="featured__title">Gradelytics</h2>
+                <p class="featured__subtitle">AI-Powered Academic Analytics Platform</p>
+                <p class="featured__desc">An AI-powered academic analytics platform that turns student performance data into clear, actionable insights for educators.</p>
+                <div class="badge-row">
+                  <span class="badge badge--accent">AI</span>
+                  <span class="badge">Web App</span>
+                  <span class="badge">Analytics</span>
+                </div>
+                <div class="featured__actions">
+                  <a href="https://gradelytics0.vercel.app/" class="btn btn--ghost" target="_blank" rel="noopener">Live Demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured__card">
+              <div class="featured__visual" aria-hidden="true">
+                <div class="featured__browser featured__browser--image" style="background-image: url('assets/images/wmic.JPG')"></div>
+              </div>
+              <div class="featured__content">
+                <p class="eyebrow">FEATURED PROJECT</p>
+                <h2 class="featured__title">Wealth Management And Investment Centre</h2>
+                <p class="featured__subtitle">Corporate Financial Services Website</p>
+                <p class="featured__desc">A professional corporate website for WMIC (Pvt) Ltd — clean, responsive and built to instil client trust.</p>
+                <div class="badge-row">
+                  <span class="badge">Business</span>
+                  <span class="badge">Responsive</span>
+                  <span class="badge">Web</span>
+                </div>
+                <div class="featured__actions">
+                  <a href="https://wmic.co.za" class="btn btn--ghost" target="_blank" rel="noopener">Live Demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+                </div>
+              </div>
+            </article>
+
           </div>
 
-          <div class="featured__actions">
-            <a href="https://www.urbanwheels.co.zw" class="btn btn--ghost" target="_blank" rel="noopener">Live Demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
-          </div>
+          <button class="featured-carousel__arrow" data-dir="next" aria-label="Next project">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
+
+        <div class="featured-carousel__nav">
+          <div class="featured-carousel__dots" aria-label="Choose featured project"></div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -117,7 +176,10 @@
 
       <div class="service-grid">
         <article class="service-card reveal-on-scroll">
-          <span class="service-card__index">01</span>
+          <div class="service-card__top">
+            <span class="service-card__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></span>
+            <span class="service-card__index">01</span>
+          </div>
           <h3 class="service-card__title">Websites</h3>
           <p class="service-card__desc">Professional websites that give your business a strong presence online.</p>
           <ul class="service-card__list">
@@ -132,7 +194,10 @@
         </article>
 
         <article class="service-card service-card--accent reveal-on-scroll">
-          <span class="service-card__index">02</span>
+          <div class="service-card__top">
+            <span class="service-card__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+            <span class="service-card__index">02</span>
+          </div>
           <h3 class="service-card__title">Web Applications</h3>
           <p class="service-card__desc">Custom software designed around your business, workflow or idea.</p>
           <ul class="service-card__list">
@@ -147,7 +212,10 @@
         </article>
 
         <article class="service-card reveal-on-scroll">
-          <span class="service-card__index">03</span>
+          <div class="service-card__top">
+            <span class="service-card__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.2 5.3L19.5 10.5l-5.3 2.2L12 18l-2.2-5.3L4.5 10.5l5.3-2.2L12 3z"></path><path d="M19 16l.9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16z"></path></svg></span>
+            <span class="service-card__index">03</span>
+          </div>
           <h3 class="service-card__title">AI Solutions</h3>
           <p class="service-card__desc">Add intelligence to websites and applications through practical AI integration.</p>
           <ul class="service-card__list">
