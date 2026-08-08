@@ -869,7 +869,7 @@ input, select, textarea { font: inherit; }
 .footer { border-top: 1px solid rgba(59, 130, 246, 0.3); padding: var(--sp-8) 0 var(--sp-6); background: linear-gradient(180deg, #000 0%, #070707 100%); }
 .footer__inner {
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
+  grid-template-columns: 1.6fr repeat(3, 1fr);
   gap: var(--sp-6);
 }
 .footer__tagline { color: var(--text-tertiary); font-size: 13.5px; margin-top: var(--sp-3); }
@@ -890,7 +890,20 @@ input, select, textarea { font: inherit; }
   transition: color var(--dur-fast) var(--ease);
 }
 .footer__col a:hover { color: var(--brand); }
-.footer__social { display: flex; align-items: center; gap: var(--sp-3); }
+.footer__col .footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  word-break: break-word;
+}
+.footer__contact .icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke-width: 1.75;
+}
+.footer__contact .icon[fill="currentColor"] { stroke: none; }
 .footer__social-link {
   position: relative;
   width: 38px; height: 38px;
@@ -916,12 +929,17 @@ input, select, textarea { font: inherit; }
 .footer__social-link .icon[fill="currentColor"] { stroke: none; }
 .footer__brand .navbar__name-accent { color: var(--brand); }
 .footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
   margin-top: var(--sp-8);
   padding-top: var(--sp-5);
   border-top: 1px solid rgba(59, 130, 246, 0.2);
   color: var(--text-tertiary);
   font-size: 13px;
 }
+.footer__location { color: var(--text-secondary); }
 
 /* ============ LEGAL PAGE ============ */
 .legal { padding: calc(var(--nav-h) + var(--sp-8)) 0 var(--sp-9); }
