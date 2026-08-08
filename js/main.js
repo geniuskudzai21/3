@@ -117,9 +117,25 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  function initFaq() {
+    const items = document.querySelectorAll(".faq__item");
+    if (!items.length) return;
+
+    items.forEach((item) => {
+      const btn = item.querySelector(".faq__question");
+      if (!btn) return;
+
+      btn.addEventListener("click", () => {
+        const isOpen = item.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initMobileNav();
     initFeaturedCarousel();
     initHeroContacts();
+    initFaq();
   });
 })();
