@@ -1006,6 +1006,8 @@ input, select, textarea { font: inherit; }
 
 /* ============ FAQ ============ */
 .faq { padding: var(--sp-9) 0; background: #000; }
+.faq .section-head { text-align: center; margin: 0 auto var(--sp-6); }
+.faq .section-head__sub { margin: 0 auto; }
 .faq__list { max-width: 720px; margin: 0 auto; }
 .faq__item { border-bottom: 1px solid var(--border); }
 .faq__item:first-child { border-top: 1px solid var(--border); }
