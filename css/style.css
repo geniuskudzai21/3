@@ -1082,16 +1082,16 @@ input, select, textarea { font: inherit; }
 .legal__section a { color: var(--brand); }
 .legal__section a:hover { text-decoration: underline; }
 
-/* ============ ABOUT PAGE ============ */
-.about-hero {
+/* ============ SUBPAGE HERO (About / Contact) ============ */
+.page-hero {
   padding: calc(var(--nav-h) + var(--sp-8)) 0 var(--sp-9);
   background:
     radial-gradient(ellipse 60% 45% at 50% -5%, rgba(59, 130, 246, 0.12), transparent 65%),
     #000;
 }
-.about-hero .section-head { max-width: 760px; margin-bottom: 0; }
-.about-hero .section-head__title { font-size: clamp(30px, 4.2vw, 48px); }
-.about-hero .section-head__sub { max-width: 640px; margin-top: var(--sp-3); }
+.page-hero .section-head { max-width: 760px; margin-bottom: 0; }
+.page-hero .section-head__title { font-size: clamp(30px, 4.2vw, 48px); }
+.page-hero .section-head__sub { max-width: 640px; margin-top: var(--sp-3); }
 
 .about-cta {
   padding: var(--sp-9) 0;

@@ -4,8 +4,8 @@
 <script>document.documentElement.classList.replace('no-js','js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — Genius Sites</title>
-<meta name="description" content="Learn about Genius Sites, a Zimbabwe-based digital studio building fast, modern websites, custom web applications and AI-powered solutions — and why businesses choose to work with us.">
+<title>Contact Us — Genius Sites</title>
+<meta name="description" content="Get in touch with Genius Sites. Chat on WhatsApp, email us, or send a project brief. We reply fast and will help you plan your website, web app or AI solution.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,11 +27,11 @@
       <a href="index.html#work" class="navbar__link">Work</a>
       <a href="index.html#pricing" class="navbar__link">Pricing</a>
       <a href="about.html" class="navbar__link">About</a>
-      <a href="index.html#contact" class="navbar__link">Contact</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
     </nav>
 
     <div class="navbar__actions">
-      <a href="index.html#contact" class="btn btn--primary btn--sm navbar__cta">Get Started</a>
+      <a href="contact.html" class="btn btn--primary btn--sm navbar__cta">Get Started</a>
       <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
         <span class="navbar__toggle-line"></span>
         <span class="navbar__toggle-line"></span>
@@ -47,82 +47,139 @@
       <a href="index.html#work" class="mobile-nav__link">Work</a>
       <a href="index.html#pricing" class="mobile-nav__link">Pricing</a>
       <a href="about.html" class="mobile-nav__link">About</a>
-      <a href="index.html#contact" class="mobile-nav__link">Contact</a>
+      <a href="contact.html" class="mobile-nav__link">Contact</a>
     </nav>
-    <a href="index.html#contact" class="btn btn--primary mobile-nav__cta">Get Started <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">Get Started <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ============ ABOUT PAGE HERO ============ -->
-  <section class="page-hero" aria-labelledby="about-hero-heading">
+  <!-- ============ CONTACT PAGE HERO ============ -->
+  <section class="page-hero" aria-labelledby="contact-hero-heading">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">ABOUT US</p>
-        <h1 id="about-hero-heading" class="section-head__title">We build digital products that actually work.</h1>
-        <p class="section-head__sub">Genius Sites is a Zimbabwe-based digital studio helping individuals and businesses go online with fast, modern websites, custom web applications and AI-powered solutions.</p>
+        <p class="eyebrow">CONTACT US</p>
+        <h1 id="contact-hero-heading" class="section-head__title">Have a project in mind?</h1>
+        <p class="section-head__sub">Tell us what you want to build. We'll figure out the technology — and reply fast.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="about" aria-label="Who we are">
-    <div class="container about__container">
-      <div class="about__content">
-        <p class="eyebrow">WHO WE ARE</p>
-        <h2 class="about__title">Technology Shouldn't Be Complicated.</h2>
-        <p class="about__text">We're a small team based in Mutare, Zimbabwe, building websites, web applications and AI-powered tools for people and businesses that want to establish or improve their digital presence.</p>
-        <p class="about__text">We believe every project should start with the problem you're trying to solve, not with the latest trend. We build around the actual need, keep the solution simple, and make sure it's fast, reliable and easy to maintain long after launch.</p>
-        <p class="about__text">From a clean business website to a custom application built around your workflow, we focus on the details that matter: speed, usability and clear communication from first message to final handover.</p>
-        <p class="about__location"><span class="about__location-dot" aria-hidden="true"></span>Based in Mutare, Zimbabwe &bull; Working with clients anywhere</p>
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" aria-label="Contact details and project form">
+    <div class="container">
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fName">Your name</label>
+              <input type="text" id="fName" name="name" placeholder="Jane Doe" autocomplete="name">
+              <span class="form-error" id="err-fName"></span>
+            </div>
+            <div class="form-field">
+              <label for="fEmail">Email</label>
+              <input type="email" id="fEmail" name="email" placeholder="jane@example.com" autocomplete="email">
+              <span class="form-error" id="err-fEmail"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fPhone">Phone / WhatsApp</label>
+              <input type="tel" id="fPhone" name="phone" placeholder="+263 ..." autocomplete="tel">
+              <span class="form-error" id="err-fPhone"></span>
+            </div>
+            <div class="form-field">
+              <label for="fBudget">Budget range</label>
+              <select id="fBudget" name="budget">
+                <option value="">Select a budget range</option>
+                <option>Under $50</option>
+                <option>$50 – $150</option>
+                <option>$150 – $500</option>
+                <option>$500+</option>
+                <option>Not sure yet</option>
+              </select>
+              <span class="form-error" id="err-fBudget"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="fType">Project type</label>
+            <select id="fType" name="type">
+              <option value="">What do you want to build?</option>
+              <option>Website</option>
+              <option>Web Application</option>
+              <option>AI Solution</option>
+              <option>Something else</option>
+            </select>
+            <span class="form-error" id="err-fType"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="fDesc">Project details</label>
+            <textarea id="fDesc" name="details" placeholder="Tell us about your project — what it should do, and any deadlines you have."></textarea>
+            <span class="form-error" id="err-fDesc"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary contact-form__submit">Send Project Brief
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+          <p class="contact-form__note" id="formNote" role="status"></p>
+        </form>
+
+        <aside class="contact-aside reveal-on-scroll">
+          <a href="https://wa.me/263776398294" class="whatsapp-cta" target="_blank" rel="noopener">
+            <span class="whatsapp-cta__icon" aria-hidden="true"><svg class="icon icon--lg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+            <span>
+              <strong>Chat on WhatsApp</strong>
+              <small>+263 776 398 294</small>
+            </span>
+          </a>
+          <div class="contact-aside__info">
+            <p>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+              <span><strong>Email</strong><a href="mailto:eusingsungie@gmail.com">eusingsungie@gmail.com</a></span>
+            </p>
+            <p>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span><strong>Call</strong><a href="tel:+263776398294">+263 776 398 294</a></span>
+            </p>
+            <p>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span><strong>Location</strong><span>Mutare, Zimbabwe &bull; working with clients anywhere</span></span>
+            </p>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY CHOOSE US ============ -->
-  <section class="values" aria-label="Why choose us">
+  <!-- ============ WHAT HAPPENS NEXT ============ -->
+  <section class="values" aria-label="What happens next">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">WHY CHOOSE US</p>
-        <h2 class="section-head__title">Why work with Genius Sites?</h2>
-        <p class="section-head__sub">A few reasons clients keep coming back.</p>
+        <p class="eyebrow">WHAT HAPPENS NEXT</p>
+        <h2 class="section-head__title">A simple, no-nonsense process</h2>
       </div>
 
       <div class="values-grid">
         <div class="value-card reveal-on-scroll">
-          <h3 class="value-card__title">Practical Solutions</h3>
-          <p class="value-card__desc">We build around the actual problem rather than adding unnecessary features. Every element earns its place.</p>
+          <h3 class="value-card__title">1. You reach out</h3>
+          <p class="value-card__desc">Send a message on WhatsApp, email us, or fill in the form. Tell us what you want to build.</p>
         </div>
         <div class="value-card reveal-on-scroll">
-          <h3 class="value-card__title">Modern Technology</h3>
-          <p class="value-card__desc">Fast, responsive and maintainable products built with current, well-supported tools.</p>
+          <h3 class="value-card__title">2. We reply fast</h3>
+          <p class="value-card__desc">Usually within a day — with any questions and a clear estimate for the project.</p>
         </div>
         <div class="value-card reveal-on-scroll">
-          <h3 class="value-card__title">AI When It Makes Sense</h3>
-          <p class="value-card__desc">We use AI where it creates genuine value for your business, not simply because it is trendy.</p>
+          <h3 class="value-card__title">3. We build it</h3>
+          <p class="value-card__desc">Clean, modern and tested work — delivered on schedule and kept up to date as we go.</p>
         </div>
         <div class="value-card reveal-on-scroll">
-          <h3 class="value-card__title">Affordable Entry Point</h3>
-          <p class="value-card__desc">Professional websites starting from $50, with clear pricing and no hidden surprises.</p>
+          <h3 class="value-card__title">4. You launch</h3>
+          <p class="value-card__desc">We hand everything over and stay available for support after your site goes live.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CTA ============ -->
-  <section class="about-cta" aria-label="Start a project">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">LET'S TALK</p>
-        <h2 class="section-head__title">Have a project in mind?</h2>
-        <p class="section-head__sub">Tell us what you want to build. We'll figure out the technology.</p>
-      </div>
-      <div class="about-cta__actions">
-        <a href="index.html#contact" class="btn btn--primary btn--lg">Get Started
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <a href="https://wa.me/263776398294" class="btn btn--ghost btn--lg" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -189,6 +246,7 @@
 </footer>
 
 <script src="js/animations.js" defer></script>
+<script src="js/form.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
