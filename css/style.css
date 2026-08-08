@@ -435,11 +435,9 @@ input, select, textarea { font: inherit; }
 .featured__browser--image {
   position: relative;
   height: 360px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(1.5px);
-  transform: scale(1.03);
 }
 .featured__browser--image::after {
   content: "";
