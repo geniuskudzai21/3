@@ -40,6 +40,7 @@
     const root = document.getElementById("featuredCarousel");
     if (!root) return;
 
+    const viewport = root.querySelector(".featured-carousel__viewport");
     const track = root.querySelector(".featured-carousel__track");
     const dotsWrap = root.querySelector(".featured-carousel__dots");
     const prevBtn = root.querySelector('[data-dir="prev"]');
@@ -101,6 +102,44 @@
       if (e.key === "ArrowRight") { e.preventDefault(); next(); restart(); }
       if (e.key === "ArrowLeft") { e.preventDefault(); prev(); restart(); }
     });
+
+    // Swipe / drag support (mouse + touch) — when done, snap to nearest slide
+    let startX = null;
+    let currentX = null;
+    let dragging = false;
+
+    function onPointerDown(e) {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      dragging = true;
+      startX = e.clientX;
+      currentX = e.clientX;
+      track.style.transition = "none";
+      track.setPointerCapture(e.pointerId);
+    }
+
+    function onPointerMove(e) {
+      if (!dragging) return;
+      currentX = e.clientX;
+      const delta = currentX - startX;
+      track.style.transform = "translateX(calc(" + (-index * 100) + "% + " + delta + "px))";
+    }
+
+    function onPointerUp() {
+      if (!dragging) return;
+      dragging = false;
+      track.style.transition = "";
+      const delta = currentX - startX;
+      if (delta < -50) { next(); restart(); }
+      else if (delta > 50) { prev(); restart(); }
+      else { goTo(index); restart(); }
+      startX = null;
+      currentX = null;
+    }
+
+    viewport.addEventListener("pointerdown", onPointerDown);
+    viewport.addEventListener("pointermove", onPointerMove);
+    viewport.addEventListener("pointerup", onPointerUp);
+    viewport.addEventListener("pointercancel", onPointerUp);
 
     goTo(0);
     restart();

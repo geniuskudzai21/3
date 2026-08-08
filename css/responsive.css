@@ -70,9 +70,8 @@
   .featured__browser--image { height: 220px; }
   .featured__actions { flex-direction: column; }
   .featured__actions .btn { width: 100%; justify-content: center; }
-  .featured-carousel__arrow { width: 36px; height: 36px; }
-  .featured-carousel__arrow[data-dir="prev"] { left: var(--sp-2); }
-  .featured-carousel__arrow[data-dir="next"] { right: var(--sp-2); }
+  /* Arrows removed on touch devices — swipe to change project */
+  .featured-carousel__arrow { display: none; }
 
   /* Services / Portfolio / Ideas / Values → single column */
   .service-grid,
