@@ -109,6 +109,10 @@
   /* Values */
   .value-card { padding: var(--sp-4) 0; }
 
+  /* CTA banner */
+  .cta-banner { padding: var(--sp-8) 0; }
+  .cta-banner__btn { width: 100%; justify-content: center; }
+
   /* Contact */
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .contact-form { padding: var(--sp-5); }
