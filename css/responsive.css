@@ -1,5 +1,6 @@
 /* ============================================================
-   RESPONSIVE — tablet (≤1024px) and mobile (≤640px)
+   RESPONSIVE — tablet (≤1024px), phone-landscape (≤760px),
+   phone/small-tablet (≤720px) and mobile (≤640px)
    ============================================================ */
 
 /* ============ TABLET ============ */
@@ -7,9 +8,6 @@
   :root { --sp-9: 72px; --sp-10: 96px; }
 
   .container { padding: 0 var(--sp-5); }
-
-  .navbar__nav { display: none; }
-  .navbar__toggle { display: flex; }
 
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .service-card:nth-child(3) { grid-column: 1 / -1; }
@@ -39,44 +37,18 @@
   /* background-attachment: fixed is unreliable on iOS Safari */
   .cta-banner { background-attachment: scroll; }
 
-  /* Mobile nav is the primary navigation below desktop width.
-     The hamburger is visible from ≤1024px, so the panel must exist
-     here too (it previously only activated at ≤640px). */
-  .mobile-nav {
-    display: block;
-    position: fixed;
-    top: var(--nav-h); left: 0; right: 0;
-    bottom: 0;
-    background: rgba(15, 18, 22, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: var(--sp-6) var(--sp-5);
-    transform: translateY(-8px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity var(--dur-med) var(--ease), transform var(--dur-med) var(--ease);
-    z-index: 90;
-    overflow-y: auto;
-  }
-  .mobile-nav[data-state="open"] {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-  .mobile-nav__link {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 20px;
-    font-weight: 600;
-    padding: var(--sp-4) 0;
-    border-bottom: 1px solid var(--border);
-    color: var(--text-primary);
-  }
-  .mobile-nav__cta {
-    margin-top: var(--sp-6);
-    width: 100%;
-    justify-content: center;
-  }
+  /* Floating contact rail hidden below desktop widths */
+  .hero__contacts { display: none; }
+}
+
+/* ============ SMALL TABLET / PHONE-LANDSCAPE ============ */
+/* Desktop nav still visible above 720px — tighten it so it fits
+   without wrapping or overflowing before the hamburger kicks in. */
+@media (max-width: 760px) {
+  .navbar__nav { gap: var(--sp-4); }
+  .navbar__link { font-size: 13.5px; }
+  .navbar__actions { gap: var(--sp-3); }
+  .navbar__cta { padding: 9px 14px; font-size: 13px; }
 }
 
 /* ============ MOBILE ============ */
@@ -86,17 +58,11 @@
   body { font-size: 15px; }
   .container { padding: 0 var(--sp-4); }
 
-  /* Navbar */
+  /* Navbar — CTA hidden on phones; the hamburger menu covers nav */
   .navbar__actions .navbar__cta { display: none; }
-  .mobile-nav__link { font-size: 22px; }
 
   /* Hero */
   .hero { padding: calc(var(--nav-h) + var(--sp-7)) 0 var(--sp-7); }
-  .hero__actions { flex-direction: column; width: 100%; }
-  .hero__actions .btn { width: 100%; justify-content: center; }
-  .hero__contacts { left: var(--sp-3); bottom: var(--sp-3); }
-  .hero__contact { width: 36px; height: 36px; }
-  .hero__contact .icon { width: 16px; height: 16px; }
 
   /* Featured */
   .featured-carousel__viewport { border-radius: var(--radius-md); }
@@ -146,6 +112,57 @@
   .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--sp-5); }
   .footer__brand { grid-column: 1 / -1; margin-bottom: var(--sp-3); }
   .footer__bottom { flex-direction: column; align-items: flex-start; gap: var(--sp-2); }
+}
+
+/* ============ PHONE / SMALL TABLET (≤720px) ============ */
+/* The hamburger + full-screen mobile menu appear at ≤720px. Above
+   this width the complete desktop nav bar remains visible. */
+@media (max-width: 720px) {
+  .navbar__nav { display: none; }
+  .navbar__toggle { display: flex; }
+
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    top: var(--nav-h); left: 0; right: 0;
+    bottom: 0;
+    background: rgba(15, 18, 22, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: var(--sp-6) var(--sp-5);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-med) var(--ease), transform var(--dur-med) var(--ease);
+    z-index: 90;
+    overflow-y: auto;
+  }
+  .mobile-nav[data-state="open"] {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .mobile-nav__link {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .mobile-nav__cta {
+    margin-top: var(--sp-6);
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============ SMALL PHONE (≤480px) ============ */
+/* Hero buttons stay side by side down to 480px; below that they stack. */
+@media (max-width: 480px) {
+  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
 }
 
 /* Ensure no horizontal scroll on very narrow devices */
