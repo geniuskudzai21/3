@@ -1041,7 +1041,7 @@ input, select, textarea { font: inherit; }
   color: var(--brand);
   border-color: var(--brand-border);
 }
-.faq__item.is-open .faq__icon { transform: rotate(45deg); background: var(--brand-dim); }
+.faq__item.is-open .faq__icon { transform: rotate(180deg); background: var(--brand-dim); }
 .faq__answer {
   display: grid;
   grid-template-rows: 0fr;
