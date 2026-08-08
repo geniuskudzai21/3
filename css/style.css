@@ -126,23 +126,6 @@ input, select, textarea { font: inherit; }
 }
 
 /* ============ TYPOGRAPHY ============ */
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  margin: 0 0 var(--sp-4);
-}
-.eyebrow__dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 0 4px var(--accent-dim);
-}
-
 .section-head {
   max-width: 640px;
   margin: 0 0 var(--sp-8);
