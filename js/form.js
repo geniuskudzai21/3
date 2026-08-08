@@ -1,0 +1,83 @@
+/* ============================================================
+   FORM — contact form validation
+   No backend is wired up yet. handleSubmit() is the single
+   place to connect a real endpoint or form service later.
+   ============================================================ */
+
+(function () {
+  "use strict";
+
+  const validators = {
+    fName: (v) => (v.trim().length >= 2 ? "" : "Please enter your name."),
+    fEmail: (v) =>
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? "" : "Please enter a valid email address.",
+    fPhone: (v) => (v.trim().length >= 7 ? "" : "Please enter a valid phone/WhatsApp number."),
+    fType: (v) => (v ? "" : "Please select a project type."),
+    fBudget: (v) => (v ? "" : "Please select a budget range."),
+    fDesc: (v) => (v.trim().length >= 10 ? "" : "Tell us a little more about the project (10+ characters)."),
+  };
+
+  function validateField(field) {
+    const validator = validators[field.id];
+    if (!validator) return true;
+
+    const errorEl = document.getElementById(`err-${field.id}`);
+    const message = validator(field.value);
+
+    field.closest(".form-field")?.classList.toggle("has-error", Boolean(message));
+    if (errorEl) errorEl.textContent = message;
+
+    return !message;
+  }
+
+  function handleSubmit(form, noteEl) {
+    /*
+      No backend yet. To connect one later:
+
+        const payload = Object.fromEntries(new FormData(form).entries());
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+      or swap the fetch call for a form service (e.g. Formspree,
+      Web3Forms) using the same `form` element.
+    */
+    noteEl.textContent = "Thanks — your project request has been captured. We'll be in touch soon.";
+    noteEl.style.color = "#3dba6e";
+    form.reset();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    const noteEl = document.getElementById("formNote");
+    const fields = Array.from(form.querySelectorAll("input, select, textarea"));
+
+    fields.forEach((field) => {
+      field.addEventListener("blur", () => validateField(field));
+      field.addEventListener("input", () => {
+        if (field.closest(".form-field")?.classList.contains("has-error")) {
+          validateField(field);
+        }
+      });
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      noteEl.textContent = "";
+
+      const allValid = fields.map(validateField).every(Boolean);
+      if (!allValid) {
+        noteEl.style.color = "#e2554f";
+        noteEl.textContent = "Please fix the highlighted fields.";
+        form.querySelector(".has-error input, .has-error select, .has-error textarea")?.focus();
+        return;
+      }
+
+      handleSubmit(form, noteEl);
+    });
+  });
+})();
