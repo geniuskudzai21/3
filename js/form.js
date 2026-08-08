@@ -30,23 +30,43 @@
     return !message;
   }
 
-  function handleSubmit(form, noteEl) {
-    /*
-      No backend yet. To connect one later:
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mljrgzgw";
 
-        const payload = Object.fromEntries(new FormData(form).entries());
-        await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
+  async function handleSubmit(form, noteEl) {
+    const submitBtn = form.querySelector('[type="submit"]');
+    const originalLabel = submitBtn ? submitBtn.textContent : "";
 
-      or swap the fetch call for a form service (e.g. Formspree,
-      Web3Forms) using the same `form` element.
-    */
-    noteEl.textContent = "Thanks — your project request has been captured. We'll be in touch soon.";
-    noteEl.style.color = "#3dba6e";
-    form.reset();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+    noteEl.textContent = "";
+    noteEl.style.color = "";
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        noteEl.style.color = "#3dba6e";
+        noteEl.textContent = "Thanks — your message has been sent. We'll be in touch soon.";
+        form.reset();
+      } else {
+        noteEl.style.color = "#e2554f";
+        noteEl.textContent = "Something went wrong sending your message. Please try again or email us directly.";
+      }
+    } catch (err) {
+      noteEl.style.color = "#e2554f";
+      noteEl.textContent = "Network error — please check your connection and try again.";
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
