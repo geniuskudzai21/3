@@ -83,41 +83,23 @@
     <div class="container">
       <div class="featured__card reveal-on-scroll">
         <div class="featured__visual" aria-hidden="true">
-          <div class="featured__browser">
-            <div class="featured__browser-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="featured__browser-body">
-              <div class="featured__mock-chart">
-                <div class="bar" style="--h:38%"></div>
-                <div class="bar" style="--h:62%"></div>
-                <div class="bar" style="--h:51%"></div>
-                <div class="bar" style="--h:78%"></div>
-                <div class="bar" style="--h:66%"></div>
-                <div class="bar" style="--h:90%"></div>
-              </div>
-              <div class="featured__mock-lines">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
+          <div class="featured__browser featured__browser--image" style="background-image: url('assets/images/urban.jpeg')"></div>
         </div>
 
         <div class="featured__content">
           <p class="eyebrow">FEATURED PROJECT</p>
-          <h2 id="featured-heading" class="featured__title">Gradelytics</h2>
-          <p class="featured__subtitle">AI-Powered Academic Analytics Platform</p>
-          <p class="featured__desc">An intelligent web application that helps students track academic performance, analyse results, predict grades and receive AI-powered insights.</p>
+          <h2 id="featured-heading" class="featured__title">Urban Wheels</h2>
+          <p class="featured__subtitle">Modern Automotive Sales Platform</p>
+          <p class="featured__desc">A modern automotive sales website and platform — sleek inventory browsing, vehicle listings and an integrated database.</p>
 
           <div class="badge-row">
-            <span class="badge badge--accent">AI</span>
-            <span class="badge">Web App</span>
-            <span class="badge">Analytics</span>
+            <span class="badge badge--accent">Business</span>
+            <span class="badge">Web</span>
+            <span class="badge">Database</span>
           </div>
 
           <div class="featured__actions">
-            <a href="#work" class="btn btn--secondary">View Project</a>
-            <a href="#work" class="btn btn--ghost">Live Demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+            <a href="https://www.urbanwheels.co.zw" class="btn btn--ghost" target="_blank" rel="noopener">Live Demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
           </div>
         </div>
       </div>
@@ -182,48 +164,6 @@
     </div>
   </section>
 
-  <!-- ============ AI DEMO ============ -->
-  <section class="ai-demo" id="ai-demo">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">LIVE DEMO</p>
-        <h2 class="section-head__title">See AI in Action</h2>
-        <p class="section-head__sub">AI doesn't have to be complicated. Here's a small example of what we can integrate into a website.</p>
-      </div>
-
-      <div class="chat-widget reveal-on-scroll">
-        <div class="chat-widget__header">
-          <span class="chat-widget__status" aria-hidden="true"></span>
-          <div>
-            <p class="chat-widget__title">Site Assistant</p>
-            <p class="chat-widget__subtitle">Usually replies instantly</p>
-          </div>
-        </div>
-
-        <div class="chat-widget__body" id="chatBody" role="log" aria-live="polite">
-          <div class="chat-msg chat-msg--ai">
-            <p>Hi, I'm a demo of the kind of assistant we can build into your site. Ask me something, or tap a suggestion below.</p>
-          </div>
-        </div>
-
-        <div class="chat-widget__suggestions" id="chatSuggestions">
-          <button class="chip" type="button" data-question="What can you build for my business?">What can you build for my business?</button>
-          <button class="chip" type="button" data-question="How much does a website cost?">How much does a website cost?</button>
-          <button class="chip" type="button" data-question="Can you add AI to my website?">Can you add AI to my website?</button>
-          <button class="chip" type="button" data-question="How does the development process work?">How does the development process work?</button>
-        </div>
-
-        <form class="chat-widget__input-row" id="chatForm">
-          <label for="chatInput" class="sr-only">Type a message</label>
-          <input type="text" id="chatInput" placeholder="Type a message…" autocomplete="off">
-          <button type="submit" class="chat-widget__send" aria-label="Send message">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ PORTFOLIO ============ -->
   <section class="portfolio" id="work">
     <div class="container">
@@ -235,8 +175,8 @@
 
       <div class="portfolio-grid">
         <article class="project-card reveal-on-scroll">
-          <div class="project-card__visual" aria-hidden="true">
-            <div class="project-card__glyph">Gr</div>
+          <div class="project-card__visual">
+            <img src="assets/images/gradelytics.JPG" alt="Gradelytics preview" class="project-card__img" loading="lazy">
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Gradelytics</h3>
@@ -254,8 +194,8 @@
         </article>
 
         <article class="project-card reveal-on-scroll">
-          <div class="project-card__visual" aria-hidden="true">
-            <div class="project-card__glyph">Uw</div>
+          <div class="project-card__visual">
+            <img src="assets/images/urban.jpeg" alt="Urban Wheels preview" class="project-card__img" loading="lazy">
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">Urban Wheels</h3>
@@ -481,80 +421,23 @@
         <p class="section-head__sub">Tell us what you want to build. We'll figure out the technology.</p>
       </div>
 
-      <div class="contact-grid">
-        <form class="contact-form reveal-on-scroll" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fName">Name</label>
-              <input type="text" id="fName" name="name" required autocomplete="name">
-              <span class="form-error" id="err-fName"></span>
-            </div>
-            <div class="form-field">
-              <label for="fEmail">Email</label>
-              <input type="email" id="fEmail" name="email" required autocomplete="email">
-              <span class="form-error" id="err-fEmail"></span>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fPhone">WhatsApp / Phone</label>
-              <input type="tel" id="fPhone" name="phone" required autocomplete="tel">
-              <span class="form-error" id="err-fPhone"></span>
-            </div>
-            <div class="form-field">
-              <label for="fType">Project Type</label>
-              <select id="fType" name="projectType" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="website">Website</option>
-                <option value="webapp">Web Application</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="ai">AI Integration</option>
-                <option value="other">Other</option>
-              </select>
-              <span class="form-error" id="err-fType"></span>
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label for="fBudget">Budget</label>
-            <select id="fBudget" name="budget" required>
-              <option value="" disabled selected>Select a range</option>
-              <option value="50-150">$50 – $150</option>
-              <option value="150-500">$150 – $500</option>
-              <option value="500-1000">$500 – $1,000</option>
-              <option value="1000+">$1,000+</option>
-              <option value="not-sure">Not sure</option>
-            </select>
-            <span class="form-error" id="err-fBudget"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="fDesc">Project Description</label>
-            <textarea id="fDesc" name="description" rows="5" required></textarea>
-            <span class="form-error" id="err-fDesc"></span>
-          </div>
-
-          <button type="submit" class="btn btn--primary btn--lg contact-form__submit">Send Project Request <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
-          <p class="contact-form__note" id="formNote" role="status" aria-live="polite"></p>
-        </form>
-
-        <div class="contact-aside reveal-on-scroll">
-          <a href="https://wa.me/263000000000" class="whatsapp-cta" target="_blank" rel="noopener">
-            <span class="whatsapp-cta__icon" aria-hidden="true"><svg class="icon icon--lg" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+      <div class="about__container">
+        <div class="contact-aside contact-aside--single reveal-on-scroll">
+          <a href="https://wa.me/263776398294" class="whatsapp-cta" target="_blank" rel="noopener">
+            <span class="whatsapp-cta__icon" aria-hidden="true"><svg class="icon icon--lg" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
             <span>
               <strong>Chat on WhatsApp</strong>
-              <small>Usually the fastest way to reach us</small>
+              <small>+263 776 398 294</small>
             </span>
           </a>
           <div class="contact-aside__info">
             <p>
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
-              <span><strong>Email</strong>hello@geniussites.com</span>
+              <span><strong>Email</strong><a href="mailto:esuingsungie@gmail.com">esuingsungie@gmail.com</a></span>
             </p>
             <p>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <span><strong>Response time</strong>Within 24 hours</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span><strong>Call</strong><a href="tel:+263776398294">+263 776 398 294</a></span>
             </p>
           </div>
         </div>
@@ -573,6 +456,18 @@
         <span class="navbar__name">Genius<span class="navbar__name-accent">Sites</span></span>
       </a>
       <p class="footer__tagline">Websites &bull; Web Apps &bull; AI Solutions</p>
+      <p class="footer__about">Genius Sites is a Zimbabwe-based digital studio building fast, modern websites, web apps and AI-powered solutions for businesses that want to stand out.</p>
+      <div class="footer__social">
+        <a href="https://wa.me/263776398294" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+        </a>
+        <a href="tel:+263776398294" class="footer__social-link" aria-label="Call +263 776 398 294">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <a href="mailto:esuingsungie@gmail.com" class="footer__social-link" aria-label="Email esuingsungie@gmail.com">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>
+        </a>
+      </div>
     </div>
 
     <div class="footer__col">
@@ -594,24 +489,16 @@
 
     <div class="footer__col">
       <h4>Contact</h4>
-      <a href="mailto:hello@geniussites.com">hello@geniussites.com</a>
-      <a href="https://wa.me/263000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:esuingsungie@gmail.com">esuingsungie@gmail.com</a>
+      <a href="https://wa.me/263776398294" target="_blank" rel="noopener">WhatsApp</a>
       <span class="footer__placeholder">Zimbabwe</span>
     </div>
 
     <div class="footer__col">
-      <h4>Follow</h4>
-      <div class="footer__social">
-        <a href="#" class="footer__social-link footer__placeholder" aria-label="GitHub (placeholder link)">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-        </a>
-        <a href="#" class="footer__social-link footer__placeholder" aria-label="LinkedIn (placeholder link)">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-        </a>
-        <a href="#" class="footer__social-link footer__placeholder" aria-label="Instagram (placeholder link)">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-        </a>
-      </div>
+      <h4>Legal</h4>
+      <a href="legal.html#legal-notice">Legal Notice</a>
+      <a href="legal.html#privacy-policy">Privacy Policy</a>
+      <a href="legal.html#terms-of-service">Terms of Service</a>
     </div>
   </div>
 
@@ -621,7 +508,6 @@
 </footer>
 
 <script src="js/animations.js" defer></script>
-<script src="js/chatbot.js" defer></script>
 <script src="js/form.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
