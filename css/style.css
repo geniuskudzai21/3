@@ -1026,12 +1026,22 @@ input, select, textarea { font: inherit; }
 }
 .faq__question:hover { color: var(--brand); }
 .faq__icon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
-  transition: transform var(--dur-med) var(--ease);
+  padding: 4px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  transition: transform var(--dur-med) var(--ease), color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
 }
-.faq__item.is-open .faq__icon { transform: rotate(180deg); }
+.faq__question:hover .faq__icon,
+.faq__item.is-open .faq__icon {
+  color: var(--brand);
+  border-color: var(--brand-border);
+}
+.faq__item.is-open .faq__icon { transform: rotate(45deg); background: var(--brand-dim); }
 .faq__answer {
   display: grid;
   grid-template-rows: 0fr;
