@@ -403,6 +403,13 @@ input, select, textarea { font: inherit; }
   display: flex;
   flex-direction: column;
   gap: var(--sp-3);
+  transition: opacity var(--dur-med) var(--ease), transform var(--dur-med) var(--ease), visibility var(--dur-med) var(--ease);
+}
+.hero__contacts.is-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  visibility: hidden;
+  pointer-events: none;
 }
 .hero__contact {
   position: relative;

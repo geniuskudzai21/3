@@ -106,8 +106,20 @@
     restart();
   }
 
+  function initHeroContacts() {
+    const rail = document.querySelector(".hero__contacts");
+    if (!rail) return;
+
+    const onScroll = () => {
+      rail.classList.toggle("is-hidden", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initMobileNav();
     initFeaturedCarousel();
+    initHeroContacts();
   });
 })();
