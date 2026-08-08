@@ -420,7 +420,6 @@ input, select, textarea { font: inherit; }
   border-radius: 50%;
   color: var(--text-secondary);
   border: 1px solid rgba(59, 130, 246, 0.18);
-  box-shadow: 0 0 18px -6px var(--brand-glow);
   transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .hero__contact .icon {
@@ -989,13 +988,13 @@ input, select, textarea { font: inherit; }
 /* ============ CTA BANNER ============ */
 .cta-banner {
   position: relative;
-  padding: var(--sp-10) 0;
+  padding: var(--sp-9) 0;
   text-align: center;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(59, 130, 246, 0.18), transparent 60%),
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url("../assets/images/burner.png") center / cover no-repeat;
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(59, 130, 246, 0.18), transparent 60%) fixed,
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)) fixed,
+    url("../assets/images/burner.png") center / cover no-repeat fixed;
 }
 .cta-banner__inner {
   display: flex;
@@ -1102,7 +1101,6 @@ input, select, textarea { font: inherit; }
   border-radius: 50%;
   color: var(--text-secondary);
   border: 1px solid rgba(59, 130, 246, 0.18);
-  box-shadow: 0 0 18px -6px var(--brand-glow);
   transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .footer__social-link .icon {
@@ -1172,11 +1170,23 @@ input, select, textarea { font: inherit; }
 
 /* ============ SUBPAGE HERO (About / Contact) ============ */
 .page-hero {
+  position: relative;
   padding: calc(var(--nav-h) + var(--sp-8)) 0 var(--sp-9);
+  overflow: hidden;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  z-index: 0;
+  pointer-events: none;
   background:
     radial-gradient(ellipse 60% 45% at 50% -5%, rgba(59, 130, 246, 0.12), transparent 65%),
-    #000;
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
+    url("../assets/images/burner.png") center / cover no-repeat;
+  filter: blur(2px);
 }
+.page-hero .container { position: relative; z-index: 1; }
 .page-hero .section-head { max-width: 760px; margin-bottom: 0; }
 .page-hero .section-head__title { font-size: clamp(30px, 4.2vw, 48px); }
 .page-hero .section-head__sub { max-width: 640px; margin-top: var(--sp-3); }
