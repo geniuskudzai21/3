@@ -828,36 +828,6 @@ input, select, textarea { font: inherit; }
 .price-card__cta { justify-content: center; width: 100%; }
 .pricing__note { text-align: center; color: var(--text-tertiary); font-size: 13.5px; margin-top: var(--sp-6); }
 
-/* ============ PROCESS / TIMELINE ============ */
-.process { padding: var(--sp-9) 0; background: linear-gradient(180deg, #000 0%, #070707 50%, #000 100%); }
-.timeline {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--sp-4);
-  position: relative;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 17px; left: 4%; right: 4%;
-  height: 1px;
-  background: var(--border-strong);
-}
-.timeline__step { position: relative; padding-top: var(--sp-8); }
-.timeline__index {
-  position: absolute; top: 0; left: 0;
-  width: 36px; height: 36px;
-  display: grid; place-items: center;
-  font-family: var(--font-mono); font-size: 13px;
-  background: #0a0a0a;
-  border: 1px solid var(--border-strong);
-  border-radius: 50%;
-  color: var(--text-primary);
-  z-index: 1;
-}
-.timeline__title { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin-bottom: var(--sp-2); }
-.timeline__desc { color: var(--text-secondary); font-size: 14px; }
-
 /* ============ VALUES ============ */
 .values { padding: var(--sp-9) 0; background: #000; }
 .values-grid {
