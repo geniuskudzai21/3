@@ -933,7 +933,7 @@ input, select, textarea { font: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: var(--sp-3);
-  margin-top: var(--sp-8);
+  margin-top: var(--sp-5);
   padding-top: var(--sp-5);
   border-top: 1px solid rgba(59, 130, 246, 0.2);
   color: var(--text-tertiary);
