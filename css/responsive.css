@@ -80,6 +80,9 @@
   .hero { padding: calc(var(--nav-h) + var(--sp-7)) 0 var(--sp-7); }
   .hero__actions { flex-direction: column; width: 100%; }
   .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero__contacts { left: var(--sp-3); bottom: var(--sp-3); }
+  .hero__contact { width: 36px; height: 36px; }
+  .hero__contact .icon { width: 16px; height: 16px; }
 
   /* Featured */
   .featured-carousel__viewport { border-radius: var(--radius-md); }
