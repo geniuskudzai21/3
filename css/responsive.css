@@ -98,11 +98,6 @@
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .contact-form { padding: var(--sp-5); }
 
-  /* Chat widget */
-  .chat-widget__body { height: 280px; }
-  .chat-widget__suggestions { padding: 0 var(--sp-4) var(--sp-3); }
-  .chat-msg { max-width: 90%; }
-
   /* About page */
   .about-cta__actions { flex-direction: column; width: 100%; }
   .about-cta__actions .btn { width: 100%; justify-content: center; }

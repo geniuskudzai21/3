@@ -48,6 +48,13 @@
     const slides = Array.from(track.children);
     if (slides.length < 2) return;
 
+    const bgEls = slides.map((s) => s.querySelector("[data-bg]"));
+    function loadBg(el) {
+      if (el && el.dataset.bg && !el.style.backgroundImage) {
+        el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+      }
+    }
+
     const autoplay = root.dataset.autoplay === "true";
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let index = 0;
@@ -76,6 +83,8 @@
         s.classList.toggle("is-active", n === index);
         s.setAttribute("aria-hidden", n === index ? "false" : "true");
       });
+      loadBg(bgEls[index]);
+      loadBg(bgEls[(index + 1) % slides.length]);
     }
 
     function next() { goTo(index + 1); }
