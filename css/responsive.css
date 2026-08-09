@@ -63,7 +63,6 @@
 
   /* Hero */
   .hero { padding: calc(var(--nav-h) + var(--sp-7)) 0 var(--sp-7); }
-  .hero__actions .btn { padding: 14px 18px; }
 
   /* Featured */
   .featured-carousel__viewport { border-radius: var(--radius-md); }
