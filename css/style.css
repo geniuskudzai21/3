@@ -539,6 +539,7 @@ input, select, textarea { font: inherit; }
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
+  touch-action: pan-y;
 }
 .featured-carousel__track {
   display: flex;
