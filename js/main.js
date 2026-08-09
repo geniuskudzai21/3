@@ -112,43 +112,66 @@
       if (e.key === "ArrowLeft") { e.preventDefault(); prev(); restart(); }
     });
 
-    // Swipe / drag support (mouse + touch) — when done, snap to nearest slide
+    // Swipe / drag support (mouse + touch) — when done, snap to nearest slide.
+    // Capture is only acquired once the pointer actually moves, so a plain tap
+    // on a link/button inside a slide keeps working normally.
     let startX = null;
+    let startY = null;
     let currentX = null;
     let dragging = false;
+    let suppressClick = false;
 
     function onPointerDown(e) {
       if (e.pointerType === "mouse" && e.button !== 0) return;
-      dragging = true;
       startX = e.clientX;
+      startY = e.clientY;
       currentX = e.clientX;
-      track.style.transition = "none";
-      track.setPointerCapture(e.pointerId);
+      dragging = false;
     }
 
     function onPointerMove(e) {
-      if (!dragging) return;
+      if (startX === null) return;
+      if (!dragging) {
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        if (Math.abs(dx) < 8 || Math.abs(dx) < Math.abs(dy)) return;
+        dragging = true;
+        suppressClick = true;
+        track.style.transition = "none";
+        try { track.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      }
       currentX = e.clientX;
       const delta = currentX - startX;
       track.style.transform = "translateX(calc(" + (-index * 100) + "% + " + delta + "px))";
     }
 
     function onPointerUp() {
-      if (!dragging) return;
-      dragging = false;
-      track.style.transition = "";
-      const delta = currentX - startX;
-      if (delta < -50) { next(); restart(); }
-      else if (delta > 50) { prev(); restart(); }
-      else { goTo(index); restart(); }
+      if (startX === null) return;
+      if (dragging) {
+        track.style.transition = "";
+        const delta = currentX - startX;
+        if (delta < -50) { next(); restart(); }
+        else if (delta > 50) { prev(); restart(); }
+        else { goTo(index); restart(); }
+        window.setTimeout(() => { suppressClick = false; }, 0);
+      }
       startX = null;
       currentX = null;
+      dragging = false;
+    }
+
+    function onViewportClick(e) {
+      if (suppressClick) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
     }
 
     viewport.addEventListener("pointerdown", onPointerDown);
     viewport.addEventListener("pointermove", onPointerMove);
     viewport.addEventListener("pointerup", onPointerUp);
     viewport.addEventListener("pointercancel", onPointerUp);
+    viewport.addEventListener("click", onViewportClick, true);
 
     goTo(0);
     restart();

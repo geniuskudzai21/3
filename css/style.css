@@ -136,25 +136,6 @@ input, select, textarea { font: inherit; }
 }
 
 /* ============ TYPOGRAPHY ============ */
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--brand);
-  margin-bottom: var(--sp-3);
-}
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 1px;
-  background: var(--brand);
-  opacity: 0.7;
-}
 .section-head {
   max-width: 640px;
   margin: 0 0 var(--sp-6);
@@ -933,14 +914,12 @@ input, select, textarea { font: inherit; }
   align-items: center;
 }
 .cta-banner .section-head { margin: 0 0 var(--sp-6); }
-.cta-banner .eyebrow,
-.about-cta .eyebrow,
-.process .eyebrow { justify-content: center; }
 .cta-banner__btn { margin-top: 0; }
 
 /* ============ FAQ ============ */
 .faq { padding: var(--sp-9) 0; background: #000; }
-.faq .section-head { text-align: center; margin: 0 auto var(--sp-6); }.faq .section-head__sub { margin: 0 auto; }
+.faq .section-head { text-align: center; margin: 0 auto var(--sp-6); }
+.faq .section-head__sub { margin: 0 auto; }
 .faq__list { max-width: 720px; margin: 0 auto; }
 .faq__item { border-bottom: 1px solid var(--border); }
 .faq__item:first-child { border-top: 1px solid var(--border); }
