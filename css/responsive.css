@@ -105,7 +105,8 @@
   /* Footer */
   .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--sp-5); }
   .footer__brand { grid-column: 1 / -1; margin-bottom: var(--sp-3); }
-  .footer__bottom { flex-direction: column; align-items: flex-start; gap: var(--sp-2); }
+  .footer__bottom { flex-direction: column; align-items: flex-start; gap: var(--sp-2); margin-bottom: 7px; }
+  .footer__contact[href^="mailto"] { font-size: 12px; }
 }
 
 /* ============ PHONE / SMALL TABLET (≤720px) ============ */

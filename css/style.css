@@ -1052,6 +1052,7 @@ input, select, textarea { font: inherit; }
   stroke-width: 1.75;
 }
 .footer__contact .icon[fill="currentColor"] { stroke: none; }
+.footer__contact span { min-width: 0; }
 .footer__social-link {
   position: relative;
   width: 38px; height: 38px;
