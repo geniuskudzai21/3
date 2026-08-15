@@ -156,8 +156,8 @@
 /* ============ SMALL PHONE (≤480px) ============ */
 /* Hero buttons stay side by side down to 480px; below that they stack. */
 @media (max-width: 480px) {
-  .hero__actions { flex-direction: column; width: 100%; }
-  .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero__actions { flex-wrap: wrap; }
+  .hero__actions .btn { width: auto; }
   .footer__bottom { padding-top: var(--sp-6); margin-bottom: var(--sp-5); }
 }
 
