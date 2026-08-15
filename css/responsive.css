@@ -65,6 +65,8 @@
   .hero { padding: calc(var(--nav-h) + var(--sp-7)) 0 var(--sp-7); }
 
   /* Featured */
+  /* Show featured projects immediately on mobile instead of on scroll */
+  .featured-carousel { opacity: 1; transform: none; }
   .featured-carousel__viewport { border-radius: var(--radius-md); }
   .featured__card { padding: var(--sp-5); border-radius: var(--radius-md); gap: var(--sp-5); }
   .featured__browser--image { height: 220px; }
