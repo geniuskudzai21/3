@@ -196,7 +196,8 @@
       const btn = item.querySelector(".faq__question");
       if (!btn) return;
 
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (event) => {
+        if (!event.target.closest(".faq__icon")) return;
         const isOpen = item.classList.toggle("is-open");
         btn.setAttribute("aria-expanded", String(isOpen));
       });

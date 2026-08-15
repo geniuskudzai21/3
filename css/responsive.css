@@ -101,8 +101,11 @@
   .contact-form { padding: var(--sp-5); }
 
   /* About page */
-  .about-cta__actions { flex-direction: column; width: 100%; }
-  .about-cta__actions .btn { width: 100%; justify-content: center; }
+  .about-cta__actions { flex-direction: column; align-items: center; }
+  .about-cta__actions .btn { width: auto; }
+
+  /* Contact */
+  .contact-form__submit { width: auto; }
 
   /* Footer */
   .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--sp-5); }
@@ -150,7 +153,7 @@
   }
   .mobile-nav__cta {
     margin-top: var(--sp-6);
-    width: 100%;
+    width: auto;
     justify-content: center;
   }
 }
