@@ -19,9 +19,6 @@
 
   .pricing-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
 
-  .featured__card { grid-template-columns: 1fr; }
-  .featured__visual { order: -1; }
-
   .contact-grid { grid-template-columns: 1fr; }
   .contact-page__inner { grid-template-columns: 1fr; }
 
@@ -30,9 +27,6 @@
     row-gap: var(--sp-7);
   }
   .footer__brand { grid-column: 1 / -1; }
-
-  /* Single-column featured card keeps a tighter gap */
-  .featured__card { gap: var(--sp-6); }
 
   /* background-attachment: fixed is unreliable on iOS Safari */
   .cta-banner { background-attachment: scroll; }
@@ -63,17 +57,6 @@
 
   /* Hero */
   .hero { padding: calc(var(--nav-h) + var(--sp-7)) 0 var(--sp-7); }
-
-  /* Featured */
-  /* Show featured projects immediately on mobile instead of on scroll */
-  .featured-carousel { opacity: 1; transform: none; }
-  .featured-carousel__viewport { border-radius: var(--radius-md); }
-  .featured__card { padding: var(--sp-5); border-radius: var(--radius-md); gap: var(--sp-5); }
-  .featured__browser--image { height: 220px; }
-  .featured__actions { flex-direction: column; }
-  .featured__actions .btn { width: 100%; justify-content: center; }
-  /* Arrows removed on touch devices — swipe to change project */
-  .featured-carousel__arrow { display: none; }
 
   /* Services / Portfolio / Ideas / Values → single column */
   .service-grid,
