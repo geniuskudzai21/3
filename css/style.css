@@ -469,7 +469,7 @@ input, select, textarea { font: inherit; }
   height: 40px;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(90deg, rgba(59,130,246,0.06), rgba(59,130,246,0.02) 50%, rgba(59,130,246,0.06));
+  background: linear-gradient(90deg, rgba(59,130,246,0.1), rgba(59,130,246,0.03) 50%, rgba(59,130,246,0.1));
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -478,7 +478,7 @@ input, select, textarea { font: inherit; }
   align-items: center;
   height: 100%;
   white-space: nowrap;
-  animation: ticker-scroll 30s linear infinite;
+  animation: ticker-scroll 40s linear infinite;
   width: max-content;
 }
 .ticker__item {

@@ -148,7 +148,7 @@
 /* Hero buttons stack vertically below 480px, centered like the ideas CTA. */
 @media (max-width: 480px) {
   .hero__actions { flex-direction: column; align-items: center; gap: 17px; }
-  .hero__actions .btn { width: calc(80% - 45px); padding: 11px 28px; }
+  .hero__actions .btn { width: calc(80% - 45px); padding: 13px 28px; }
   .footer__bottom { padding-top: var(--sp-6); margin-bottom: var(--sp-5); }
 }
 
