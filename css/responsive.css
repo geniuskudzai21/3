@@ -58,6 +58,9 @@
   /* Hero */
   .hero { padding: calc(var(--nav-h) + var(--sp-7)) 0 var(--sp-7); }
 
+  /* Ticker */
+  .ticker__item { font-size: 11px; letter-spacing: 0.06em; }
+
   /* Services / Portfolio / Ideas / Values → single column */
   .service-grid,
   .portfolio-grid,
@@ -142,10 +145,10 @@
 }
 
 /* ============ SMALL PHONE (≤480px) ============ */
-/* Hero buttons stay side by side down to 480px; below that they stack. */
+/* Hero buttons stack vertically below 480px while keeping side padding. */
 @media (max-width: 480px) {
-  .hero__actions { flex-wrap: wrap; }
-  .hero__actions .btn { width: auto; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
   .footer__bottom { padding-top: var(--sp-6); margin-bottom: var(--sp-5); }
 }
 

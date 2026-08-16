@@ -464,6 +464,42 @@ input, select, textarea { font: inherit; }
 /* No-JS fallback: never leave content invisible if animations.js fails to load */
 .no-js .reveal-on-scroll { opacity: 1; transform: none; }
 
+/* ============ TICKER ============ */
+.ticker {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg, rgba(59,130,246,0.06), rgba(59,130,246,0.02) 50%, rgba(59,130,246,0.06));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ticker__track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+  width: max-content;
+}
+.ticker__item {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 0 var(--sp-3);
+}
+.ticker__sep {
+  color: var(--brand);
+  font-size: 8px;
+  opacity: 0.6;
+}
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ============ SERVICES ============ */
 .services { padding: var(--sp-9) 0; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(59, 130, 246, 0.07), transparent 70%), #000; }
 .service-grid {
